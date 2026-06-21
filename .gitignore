@@ -1,0 +1,22 @@
+# ── Secrets ──
+.env
+.env.*
+!.env.example
+
+# ── Build artifacts ──
+node_modules/
+artifacts/
+cache/
+coverage/
+coverage.json
+build/
+typechain/
+typechain-types/
+
+# ── IDE / OS ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+scripts/
+deployments/

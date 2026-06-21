@@ -1,0 +1,5 @@
+contracts/mocks/
+node_modules/
+artifacts/
+cache/
+coverage/
