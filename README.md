@@ -45,8 +45,7 @@ The protocol is **two contracts**:
 
 The factory admin (a multisig) can pause new market creation in an
 emergency but **cannot** drain funds, change fees, alter the treasury,
-or interfere with already-deployed markets. See
-[MULTISIG_GUIDE.md](MULTISIG_GUIDE.md) for the admin model.
+or interfere with already-deployed markets.
 
 ---
 
@@ -105,7 +104,6 @@ Comprehensive guides in this repo:
 |---|---|
 | [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) | Step-by-step production deployment on Base mainnet (env, wallets, hardhat config, commands, troubleshooting) |
 | [CONTRACTS_USAGE_GUIDE.md](CONTRACTS_USAGE_GUIDE.md) | Integration reference: every external call, all events/errors, frontend + backend patterns |
-| [MULTISIG_GUIDE.md](MULTISIG_GUIDE.md) | Admin Safe setup: signer selection, hardware wallets, recovery, runbook |
 | [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) | Phase-by-phase changelog of contract evolution (Phases 1-5) |
 | [SECURITY.md](SECURITY.md) | Responsible disclosure policy + security contact |
 | [CHANGELOG.md](CHANGELOG.md) | Release history (semver) |
@@ -173,7 +171,6 @@ bopster-market-contract/
   test/                     # hardhat tests (Mocha + Chai)
   DEPLOYMENT_GUIDE.md
   CONTRACTS_USAGE_GUIDE.md
-  MULTISIG_GUIDE.md
   MIGRATION_GUIDE.md
   SECURITY.md
   CHANGELOG.md
