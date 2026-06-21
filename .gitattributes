@@ -1,0 +1,4 @@
+# Make Solidity the primary language in GitHub's language bar
+contracts/** linguist-detectable=true
+test/** linguist-vendored
+*.sol linguist-language=Solidity
