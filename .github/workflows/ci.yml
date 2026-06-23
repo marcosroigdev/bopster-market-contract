@@ -129,10 +129,22 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compile contracts
+        run: npx hardhat compile
+
+      - uses: dtolnay/rust-toolchain@stable
+
       - name: Install Aderyn
-        run: |
-          curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | bash
-          echo "$HOME/.cyfrin/bin" >> $GITHUB_PATH
+        run: cargo install aderyn
 
       - name: Run Aderyn
         run: aderyn . || true
