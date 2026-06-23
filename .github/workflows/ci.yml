@@ -130,6 +130,9 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Install Aderyn
-        uses: Cyfrin/aderyn-action@v1
-        with:
-          fail-on-exit-code: false
+        run: |
+          curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | bash
+          echo "$HOME/.cyfrin/bin" >> $GITHUB_PATH
+
+      - name: Run Aderyn
+        run: aderyn . || true
