@@ -33,7 +33,12 @@
     "test:coverage": "hardhat coverage",
     "lint": "solhint 'contracts/**/*.sol'",
     "format": "prettier --write 'contracts/**/*.sol'",
-    "format:check": "prettier --check 'contracts/**/*.sol'"
+    "format:check": "prettier --check 'contracts/**/*.sol'",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:base": "hardhat run scripts/deploy.js --network base",
+    "deploy:baseSepolia": "hardhat run scripts/deploy.js --network baseSepolia",
+    "slither": "slither .",
+    "aderyn": "aderyn ."
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",

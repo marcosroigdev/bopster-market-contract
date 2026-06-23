@@ -18,5 +18,3 @@ typechain-types/
 Thumbs.db
 .idea/
 .vscode/
-scripts/
-deployments/

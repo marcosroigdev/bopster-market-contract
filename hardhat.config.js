@@ -25,19 +25,31 @@ module.exports = {
         hardhat: {
             // Local test network — no extra config needed
         },
+        base: {
+            url: process.env.BASE_RPC_URL || "https://mainnet.base.org",
+            chainId: 8453,
+            accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+        },
         baseSepolia: {
             url: process.env.BASE_SEPOLIA_RPC_URL || "https://sepolia.base.org",
             chainId: 84532,
-            accounts: process.env.DEPLOYER_PRIVATE_KEY
-                ? [process.env.DEPLOYER_PRIVATE_KEY]
-                : [],
+            accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
         },
     },
     etherscan: {
         apiKey: {
+            base: process.env.BASESCAN_API_KEY || "",
             baseSepolia: process.env.BASESCAN_API_KEY || "",
         },
         customChains: [
+            {
+                network: "base",
+                chainId: 8453,
+                urls: {
+                    apiURL: "https://api.basescan.org/api",
+                    browserURL: "https://basescan.org",
+                },
+            },
             {
                 network: "baseSepolia",
                 chainId: 84532,
