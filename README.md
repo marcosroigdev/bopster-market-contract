@@ -1,3 +1,6 @@
+<p>
+  <img src="bopster-logo-mini.png" alt="Bopster Fun" width="200" />
+</p>
 # Bopster Contracts
 
 **Binary prediction markets settled in USDC, resolved via Reality.eth.**
@@ -199,3 +202,8 @@ Built on the shoulders of:
 - [Circle](https://www.circle.com/en/usdc) - USDC
 - [Foundry](https://book.getfoundry.sh/) - `cast` for state inspection
 - [Hardhat](https://hardhat.org/) - test + deploy harness
+
+<p>
+  <img src="bopster-logo.png" alt="Bopster Fun" width="180" />
+</p>
+
